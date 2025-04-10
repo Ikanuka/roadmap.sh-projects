@@ -6,7 +6,7 @@ This is a simple HTML project build as a part of my leraning journey with Git an
 
 - `homepage.html` — Homepage
 - `articles.html` — Articles page
-- `contacte.html` - Contact page with a formular
+- `contact.html` - Contact page with a formular
 
 ## 🚀 Goals
 
