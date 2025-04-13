@@ -1,8 +1,33 @@
-h1{
-    color: brown !important;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.work{
-    color: green;
+nav .nav_links {
+    display: flex;
+    gap: 1.5rem; /* espace entre les liens */
+    list-style: none;
 }
+
+.first-title{
+    display: flex;
+    justify-content: center ;
+}
+
+.nav_links li::after{
+    content: "/"; /* add a / after each items */
+    margin-left: 0.5rem;
+}
+
+.nav_links li:last-child::after{
+    content: ""; /* No "/" after the last elements */
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    transition: all 0.3s ease 0s;
+} 
 
