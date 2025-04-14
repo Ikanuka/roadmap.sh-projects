@@ -31,3 +31,34 @@ nav .nav_links {
     transition: all 0.3s ease 0s;
 } 
 
+ul{
+    list-style: none;  
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr /* fr pour fraction */
+}
+
+.container > ul {
+    border: 1px solid black;
+} 
+
+.container > ul > li  {
+    border-bottom: 1px solid black;
+}
+.container > ul > li:last-child {
+    border-bottom: none;
+}
+.container > ul > li.course{ /* We can select specific element with the properties.class */
+    border-bottom: none;
+}
+.course::before{
+    content: "- ";
+    border-bottom: none;
+}
+
+.project {
+    padding-bottom: 10px;
+}
+
+
