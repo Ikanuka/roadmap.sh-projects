@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Fonts */
+
+h1, h3, h4, div.copyright {
+    font-family: "Indie Flower", cursive;
+    font-style: normal;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -61,4 +69,35 @@ ul{
     padding-bottom: 10px;
 }
 
+/* Cards */
 
+.review{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(280px,1fr));
+    grid-auto-flow: column;
+    grid-gap: 80px;
+    column-gap: 10em;
+    
+    
+}
+.card {
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    border: 1px solid black;
+    text-wrap: wrap; /* Gutter or alleys between grid cells can be created using column-gap or row-gap */
+}
+
+.card > .text-card{
+    word-wrap: break-word;
+    padding-bottom: 1em;
+    
+    
+}
+
+.card .signature {
+    color: gray;
+}
+.copyright {
+    padding-top: 3em;
+    text-align: center;
+}
