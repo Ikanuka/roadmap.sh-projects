@@ -1,31 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Fonts */
 
+/* Fonts */
 h1, h3, h4, div.copyright {
     font-family: "Indie Flower", cursive;
     font-style: normal;
 }
-header {
+/* Media Queries */
+@media (min-width: 576px) {
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 768px) {
+    body{
+        font-size: 5px;
+    }
+    
+    header .div-nav{
+        display: flex;  
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr /* fr pour fraction */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    
+  }
+  
+  @media (min-width: 1200px) {
+   
+  }
+.div-nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between ;
     align-items: center;
 }
 
+
 nav .nav_links {
-    display: flex;
-    gap: 1.5rem; /* espace entre les liens */
+    display: flex; /* espace entre les liens */
     list-style: none;
+    flex-direction: row;
+   
 }
 
 .first-title{
     display: flex;
     justify-content: center ;
+    align-items: center;
 }
 
 .nav_links li::after{
     content: "/"; /* add a / after each items */
-    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .nav_links li:last-child::after{
@@ -42,6 +77,8 @@ nav .nav_links {
 ul{
     list-style: none;  
 }
+
+/* Grid */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr /* fr pour fraction */
@@ -72,26 +109,24 @@ ul{
 /* Cards */
 
 .review{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(280px,1fr));
-    grid-auto-flow: column;
-    grid-gap: 80px;
-    column-gap: 10em;
-    
-    
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding : 10px
 }
 .card {
     border-radius: 20px 20px 20px 20px;
     padding: 10px;
+    margin-right: 10rem;
+    margin-left: 5em;
     border: 1px solid black;
     text-wrap: wrap; /* Gutter or alleys between grid cells can be created using column-gap or row-gap */
 }
 
-.card > .text-card{
+.review .card > .text-card{
     word-wrap: break-word;
     padding-bottom: 1em;
-    
-    
 }
 
 .card .signature {
@@ -101,3 +136,4 @@ ul{
     padding-top: 3em;
     text-align: center;
 }
+
