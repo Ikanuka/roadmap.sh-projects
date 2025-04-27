@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');  
+  
 /* Fonts */
 h1, h3, h4, div.copyright {
     font-family: "Indie Flower", cursive;
@@ -11,9 +10,10 @@ h1, h3, h4, div.copyright {
 
   }
   
-  @media (min-width: 768px) and (max-width: 768px) {
+@media (min-width: 767px) and (max-width: 769px) {
     body{
-        font-size: 5px;
+        font-size: 15px;
+        border: 2px solid black;
     }
     
     header .div-nav{
@@ -24,10 +24,89 @@ h1, h3, h4, div.copyright {
     }
 
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr /* fr pour fraction */
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+        
     }
-  }
+
+    .container > ul {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    li.project {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(146, 143, 143, 0.747);
+    }
+
+    li.works {
+        background-color: rgba(146, 143, 143, 0.747);
+    }
+
+    li.course{
+        margin: 0px 0px 0px 10px;
+    }
+
+    li.course:last-child{
+        margin-bottom: 10px;
+    }
+
+    .project-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:  1px solid black;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    h4 {
+        margin-top: 0px;
+    }
+    
+    p {
+        margin-left: 10px;
+    }
+    .work-title {
+        display:flex;
+        justify-content: center;
+        border: 1px solid black;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .education-title{
+        display: flex;
+        justify-content: center;
+        margin-right: 100px;
+    }
+
+    .review-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review{
+        flex-direction: column !important; /* Priority Conflic in CSS */
+        align-items: center; 
+        justify-content: space-between;
+        padding : 10px;
+    }
+
+    .card:first-of-type {
+        display: none;
+        margin-bottom: 100px;
+      }
+
+    .card:last-child {
+        display: none;
+    }
+}
   
   @media (min-width: 992px) {
     
@@ -36,6 +115,7 @@ h1, h3, h4, div.copyright {
   @media (min-width: 1200px) {
    
   }
+  
 .div-nav {
     display: flex;
     flex-direction: row;
@@ -78,15 +158,15 @@ ul{
     list-style: none;  
 }
 
-/* Grid */
+/* Container */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr /* fr pour fraction */
+    display: flex;
+    justify-content: center;
 }
 
 .container > ul {
     border: 1px solid black;
-} 
+}
 
 .container > ul > li  {
     border-bottom: 1px solid black;
@@ -104,6 +184,7 @@ ul{
 
 .project {
     padding-bottom: 10px;
+    padding-right: 1em;
 }
 
 /* Cards */
@@ -114,6 +195,7 @@ ul{
     align-items: center;
     justify-content: space-between;
     padding : 10px
+
 }
 .card {
     border-radius: 20px 20px 20px 20px;
